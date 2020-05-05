@@ -449,3 +449,7 @@ Else
     Throw "Unable to establish an HTTP or HTTPS remoting session."
 }
 Write-VerboseLog "PS Remoting has been successfully configured for Ansible."
+
+winrm set winrm/config/service/auth '@{Basic="true"}'
+
+winrm set winrm/config/service '@{AllowUnencrypted="true"}
