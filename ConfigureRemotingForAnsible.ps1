@@ -452,4 +452,4 @@ Write-VerboseLog "PS Remoting has been successfully configured for Ansible."
 
 winrm set winrm/config/service/auth '@{Basic="true"}'
 
-winrm set winrm/config/service '@{AllowUnencrypted="true"}
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
