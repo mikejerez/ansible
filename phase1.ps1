@@ -457,3 +457,4 @@ Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 $username = Read-Host "Username"
 $password = Read-Host -AsSecureString "Password"
 New-LocalUser -Name $username -Password $password
+Add-LocalGroupMember -Group "Administrators" -Member username
