@@ -453,3 +453,7 @@ winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 Write-VerboseLog "PS Remoting has been successfully configured for Ansible."
 
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+
+$username = Read-Host "Username"
+$password = Read-Host -AsSecureString "Password"
+New-LocalUser -Name $username -Password $password
